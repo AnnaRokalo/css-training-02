@@ -1,0 +1,27 @@
+{
+  "name": "css02",
+  "version": "1.0.0",
+  "description": "Second task for css/html training.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaRokalo/css-training-02.git"
+  },
+  "author": "Anna Rokalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaRokalo/css-training-02/issues"
+  },
+  "homepage": "https://github.com/AnnaRokalo/css-training-02#readme",
+  "devDependencies": {
+    "browser-sync": "2.11.0",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-concat": "2.6.0",
+    "gulp-sass": "2.3.1",
+    "rimraf": "2.5.0",
+    "run-sequence": "1.1.5"
+  }
+}
