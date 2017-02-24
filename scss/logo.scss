@@ -7,7 +7,8 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    content: "";}
+    content: "";
+  }
 }
 
 .logo-caption {
@@ -22,14 +23,12 @@
   line-height: normal;
   display: inline-block;
   vertical-align: middle;
-
 }
 
 .logo__icon-main,.logo__icon-rotate {
   position: absolute;
   top: 0;
   left: 0;
-
 }
 
 .logo__icon-main {
