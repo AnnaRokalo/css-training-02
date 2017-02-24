@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.header__topbar {
+  display: table;
+  width: 100%;
+}
+
+.header__logo {
+  background-image: linear-gradient( to top, #464646, #636363);
+  display: table-cell;
+  vertical-align: middle;
+  width: 30%;
+}
+
+.header__menu {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+}
+
+.header__media {
+  width:100%;
+}
+
+
+.header__title {
+  display: none;
+}

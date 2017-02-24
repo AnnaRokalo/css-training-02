@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-training task2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,400i" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__topbar">
+            <div class="header__logo">
+                <a href="index.html" class="logo">
+                    <div class="logo__icon">
+                        <svg class="logo__icon-main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 78">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.1,51.8l12.2-12.7L0.1,26.4h10.4l12.2,12.7L10.5,51.8H0.1z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9,51.8l12.2-12.7L15.9,26.4h10.4l12.2,12.7L26.2,51.8H15.9z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M77.8,51.8L65.5,39.1l12.2-12.7H67.4L55.2,39.1l12.2,12.7H77.8z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M62,51.8L49.8,39.1L62,26.4H51.6L39.4,39.1l12.2,12.7H62z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,0.1l12.6,12.3L51.6,0.1v10.4L38.9,22.8L26.3,10.5V0.1z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,15.9l12.6,12.3l12.6-12.3v10.4L38.9,38.7L26.3,26.4V15.9z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,78.2l12.6-12.3l12.6,12.3V67.7L38.9,55.4L26.3,67.7V78.2z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,62.3L38.9,50l12.6,12.3V51.9L38.9,39.6L26.3,51.9V62.3z"/>
+                        </svg>
+                        <svg class="logo__icon-rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 78">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.1,51.8l12.2-12.7L0.1,26.4h10.4l12.2,12.7L10.5,51.8H0.1z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9,51.8l12.2-12.7L15.9,26.4h10.4l12.2,12.7L26.2,51.8H15.9z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M77.8,51.8L65.5,39.1l12.2-12.7H67.4L55.2,39.1l12.2,12.7H77.8z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M62,51.8L49.8,39.1L62,26.4H51.6L39.4,39.1l12.2,12.7H62z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,0.1l12.6,12.3L51.6,0.1v10.4L38.9,22.8L26.3,10.5V0.1z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,15.9l12.6,12.3l12.6-12.3v10.4L38.9,38.7L26.3,26.4V15.9z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,78.2l12.6-12.3l12.6,12.3V67.7L38.9,55.4L26.3,67.7V78.2z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3,62.3L38.9,50l12.6,12.3V51.9L38.9,39.6L26.3,51.9V62.3z"/>
+                        </svg>
+                    </div>
+                    <div class="logo__text">TheYalow</div>
+                </a>
+            </div>
+            <div class="header__menu">
+                <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <span class="main-nav__icon main-nav__icon--user"></span>
+                        <a href="#">About us</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <span class="main-nav__icon main-nav__icon--services"></span>
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <span class="main-nav__icon main-nav__icon--contact"></span>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__content">
+            <div class="header__media">
+                <div class="video">
+                    <button class="video__play-btn" onclick="playPause()"></button>
+                    <video id="video1">
+                        <source src="video/rio.mp4" type="video/mp4" >
+                        <source src="video/rio.webm" type="video/webm">
+                        Your browser does not support HTML5 video.
+                    </video>
+                    <div class="video-controls">
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__title">
+               <h1></h1>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused) {
+                myVideo.play();
+                myVideo.controls = true;}
+            else {
+                myVideo.pause();
+                myVideo.controls = false;}
+        }
+    </script>
+
+</body>
+</html>

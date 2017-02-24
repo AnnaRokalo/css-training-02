@@ -1,0 +1,56 @@
+.main-nav {
+  list-style: none;
+  @include clear-fix;
+}
+
+.main-nav__item {
+  float: left;
+  width: 33.333%;
+  padding: 15px 2px;
+  display: block;
+  background-color: #f0c106;
+  background-image: linear-gradient(0deg, #f4c406 2px, transparent 2px), linear-gradient(90deg, #f4c406 2px, transparent 2px);
+  background-size: 6px 6px;
+  background-attachment:fixed;
+  border-right: 1px solid #d6ac05;
+  text-align: center;
+
+  a {
+    color: #9b7d08;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.main-nav__icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav__icon--user {
+  width: 11px;
+  height: 12px;
+  background: url(../img/icon-user.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-nav__icon--services {
+  width: 11px;
+  height: 11px;
+  background: url(../img/icon-wrench.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.main-nav__icon--contact {
+  width: 14px;
+  height: 11px;
+  background: url(../img/icon-letter.svg) no-repeat 50% 50%;
+  background-size: contain;
+}

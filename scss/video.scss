@@ -1,0 +1,27 @@
+.video {
+  width: 100%;
+  position: relative;
+
+  video {
+    max-width: 100%;
+  }
+}
+
+.video__play-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 67px;
+  height: 67px;
+
+  background: #f5c506  url(../img/icon-play.svg) no-repeat 50% 50%;
+  background-size: 19px 33px;
+  border-radius: 50%;
+  border: 0;
+  opacity: 0.5;
+  outline: none;
+  z-index: 2;
+}

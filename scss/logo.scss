@@ -1,0 +1,55 @@
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+
+  &:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";}
+}
+
+.logo-caption {
+  display: inline-block;
+}
+
+.logo__icon {
+  position: relative;
+
+  width: 28px;
+  height: 28px;
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.logo__icon-main,.logo__icon-rotate {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.logo__icon-main {
+  fill: #f5c506;
+  z-index: 2;
+}
+
+.logo__icon-rotate {
+  fill: rgba(#fae282,.5);
+  transform: rotate(45deg);
+}
+
+.logo__text {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  color: #ccc;
+  font-style: italic;
+  text-transform: uppercase;
+
+  vertical-align: middle;
+  line-height: 39px;
+}
