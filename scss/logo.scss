@@ -45,10 +45,13 @@
   display: inline-block;
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
-  color: #ccc;
+  color: #fff;
   font-style: italic;
+  font-weight: 700;
   text-transform: uppercase;
 
   vertical-align: middle;
   line-height: 39px;
+
+  text-shadow: 1px 2px #2c2c2c;
 }

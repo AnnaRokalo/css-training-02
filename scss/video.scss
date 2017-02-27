@@ -25,3 +25,53 @@
   outline: none;
   z-index: 2;
 }
+
+#video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  text-align: center;
+  z-index: 2;
+}
+
+#playpause {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  border: 0;
+  background: rgba(#f5c507, 0.5) url(../img/icon-play.svg) no-repeat 50% 50%;
+  background-size: 10px 17px;
+  vertical-align: middle;
+  outline: none;
+}
+
+.progress {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+progress {
+  border-radius: 5px;
+  background-color: #f5c507;
+  opacity: 0.278;
+  border: 1px solid red;
+}
+
+#progress-bar {
+  background: #f5c507;
+}
+
+#mute {
+  display: inline-block;
+  width:15px;
+  height: 15px;
+  border: 0;
+  background: transparent url('../img/icon-mute.svg') no-repeat 50% 50%;
+  background-size: contain;
+
+  vertical-align: middle;
+  outline: none;
+}
+
