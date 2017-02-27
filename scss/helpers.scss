@@ -1,7 +1,36 @@
 @mixin clear-fix {
+  *zoom: 1;
+
+  &:before,
   &:after {
-    content: "";
+    content: " ";
     display: table;
+  }
+
+  &:after {
     clear: both;
   }
+}
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (min-width: 320px) { @content; }
+  }
+  @if $media == medium {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == PC {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+}
+
+@mixin text-overflow($max-width: none) {
+  display: block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

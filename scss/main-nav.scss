@@ -6,7 +6,7 @@
 .main-nav__item {
   float: left;
   width: 33.333%;
-  padding: 15px 2px;
+
   display: block;
   background-color: #f0c106;
   background-image: linear-gradient(0deg, #f4c406 2px, transparent 2px), linear-gradient(90deg, #f4c406 2px, transparent 2px);
@@ -22,35 +22,64 @@
     font-size: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 15px 2px;
+    vertical-align: middle;
   }
 
   &:last-child {
     border-right: 0;
+  }
+
+  @include respond-to(tablet) {
+    background: initial;
+    background-color: #f0c106;
+    box-shadow: -4px -4px rgba(#f0c106,.5), -8px -8px rgba(#f0c106,.2) ;
+
+    a {
+      font-size: 18px;
+    }
   }
 }
 
 .main-nav__icon {
   display: inline-block;
   vertical-align: middle;
+  height: 11px;
+
+  @include respond-to(tablet) {
+    height: 19px;
+  }
 }
 
 .main-nav__icon--user {
   width: 11px;
-  height: 12px;
+
   background: url(../img/icon-user.svg) no-repeat 50% 50%;
   background-size: contain;
+
+  @include respond-to(tablet) {
+    width: 21px;
+  }
 }
 
 .main-nav__icon--services {
   width: 11px;
-  height: 11px;
+
   background: url(../img/icon-wrench.svg) no-repeat 50% 50%;
   background-size: contain;
+
+  @include respond-to(tablet) {
+    width: 19px;
+  }
 }
 
 .main-nav__icon--contact {
   width: 14px;
-  height: 11px;
+
   background: url(../img/icon-letter.svg) no-repeat 50% 50%;
   background-size: contain;
+
+  @include respond-to(tablet) {
+    width: 24px;
+  }
 }
