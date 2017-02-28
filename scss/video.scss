@@ -12,7 +12,7 @@
 .video__play-btn {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -30,12 +30,17 @@
 
 #video-controls {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   width: 100%;
 
   text-align: center;
   z-index: 2;
+  padding: 0 17px;
+
+  @include respond-to(medium) {
+    padding: 0 27px;
+  }
 }
 
 #playpause {
@@ -47,18 +52,26 @@
   background-size: 10px 17px;
   vertical-align: middle;
   outline: none;
+  margin-right: 25px;
 }
 
 .progress {
   display: inline-block;
   vertical-align: middle;
+  margin-right: 25px;
+  width: 60%;
+
+  @include respond-to(medium) {
+    width: 65%;
+  }
 }
 
 progress {
   border-radius: 5px;
   background-color: #f5c507;
   opacity: 0.278;
-  border: 1px solid red;
+  width: 100%;
+  //border: 1px solid red;
 }
 
 #progress-bar {

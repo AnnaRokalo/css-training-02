@@ -1,0 +1,96 @@
+.header {
+    background: none;
+
+    @include respond-to(tablet) {
+        background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
+        linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
+        url(../img/header-bg.jpg) no-repeat 0 0;
+        background-size: 0.8em 0.8em, 0.8em 0.8em, cover;
+    }
+}
+
+.header__topbar {
+    display: table;
+    width: 100%;
+
+    @include respond-to(tablet) {
+        padding: 28px 10px 50px;
+    }
+}
+
+.header__logo {
+    background-image: linear-gradient( to top, #464646, #636363);
+    display: table-cell;
+    vertical-align: middle;
+    width: 30%;
+
+    @include respond-to(tablet) {
+        background: none;
+        width: 50%;
+    }
+
+    @media only screen and (min-width: 940px) {
+        width: 55%;
+    }
+}
+
+.header__menu {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+
+    @include respond-to(tablet) {
+        background: none;
+        width: 50%;
+    }
+    @media only screen and (min-width: 940px) {
+        width: 45%;
+    }
+}
+
+.header__content {
+    padding-bottom: 0;
+
+    @include respond-to(tablet) {
+        padding-bottom: 64px;
+        display: table;
+    }
+}
+
+.header__media {
+    width: 100%;
+    @include respond-to(tablet) {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.header__text {
+    display: none;
+    @include respond-to(tablet) {
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+}
+
+.header__title {
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    color: #f5c506;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-bottom: 33px;
+    letter-spacing: 0.01em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.header__title--white {
+    color: #ffffff;
+}

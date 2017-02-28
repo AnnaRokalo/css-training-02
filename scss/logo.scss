@@ -60,6 +60,10 @@
 
   text-shadow: 1px 2px #2c2c2c;
 
+  @include respond-to(medium) {
+    font-size: 18px;
+  }
+
   @include respond-to(tablet) {
     font-size: 40px;
     line-height: 1;

@@ -5,66 +5,11 @@
 .page {
   max-width: 1020px;
   margin: 0 auto;
-}
-
-.header {
-  background: none;
+  padding: 0;
 
   @include respond-to(tablet) {
-    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
-    linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
-    url(../img/header-bg.jpg) no-repeat 0 0;
-    background-size: 0.8em 0.8em, 0.8em 0.8em, cover;
+    padding: 0 10px;
   }
-}
-
-.header__topbar {
-  display: table;
-  width: 100%;
-
-  @include respond-to(tablet) {
-    padding: 28px 0 50px;
-  }
-}
-
-.header__logo {
-  background-image: linear-gradient( to top, #464646, #636363);
-  display: table-cell;
-  vertical-align: middle;
-  width: 30%;
-
-  @include respond-to(tablet) {
-    background: none;
-    width: 50%;
-  }
-
-  @media only screen and (min-width: 940px) {
-    width: 55%;
-  }
-}
-
-.header__menu {
-  display: table-cell;
-  vertical-align: middle;
-  width: 70%;
-
-  @include respond-to(tablet) {
-    background: none;
-    width: 50%;
-  }
-
-  @media only screen and (min-width: 940px) {
-    width: 45%;
-  }
-}
-
-.header__media {
-  width: 100%;
-}
-
-
-.header__title {
-  display: none;
 }
 
 .features {
@@ -79,8 +24,8 @@
     content: '';
     display: block;
     position: absolute;
-    top: -12px;
-    bottom: -6px;
+    top: -6px;
+    bottom: -4px;
     left: 0;
     right: 0;
     margin: auto;
@@ -94,7 +39,7 @@
     content: '';
     display: block;
     position: absolute;
-    top: -7px;
+    top: -9px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -103,6 +48,13 @@
     background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(#e3e3e3,.3) 48%, rgba(#e3e3e3,.3) 52%, transparent 52%);
     background-size: 6px 6px;
     z-index: 2;
+  }
+
+  @include respond-to(tablet) {
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    &:before, &:after {
+      display: none;
+    }
   }
 }
 
@@ -126,21 +78,52 @@
 .feature__icon {
   height: 69px;
   margin: 0 auto 14px auto;
+
+  @include respond-to(medium) {
+    height: 76px;
+  }
+
+  @include respond-to(tablet) {
+    height: 95px;
+  }
 }
 
 .feature__icon--cloud {
   background: url(../img/icon-cloud.svg) no-repeat 50% 50%;
   background-size: 60px auto;
+
+  @include respond-to(medium) {
+    background-size: 90px auto;
+  }
+
+  @include respond-to(tablet) {
+    background-size: 109px auto;
+  }
 }
 
 .feature__icon--leave {
   background: url(../img/icon-leave.svg) no-repeat 50% 50%;
   background-size: 44px auto;
+
+  @include respond-to(medium) {
+    background-size: 64px auto;
+  }
+
+  @include respond-to(tablet) {
+    background-size: 91px auto;
+  }
 }
 
 .feature__icon--airplane {
   background: url(../img/icon-airplane.svg) no-repeat 50% 50%;
   background-size: 44px auto;
+
+  @include respond-to(medium) {
+    background-size: 64px auto;
+  }
+  @include respond-to(tablet) {
+    background-size: 81px auto;
+  }
 }
 
 .feature__title {
@@ -150,6 +133,14 @@
   font-size: 12px;
   text-align: center;
   text-transform: uppercase;
+
+  @include respond-to(medium) {
+    font-size: 18px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 27px;
+  }
 }
 
 .news {
@@ -172,7 +163,7 @@
   float: left;
   width: 50%;
   padding: 17px 10px 10px 10px;
-  height: 234px;
+  min-height: 166px;
 
   &:nth-child(2n) {
     padding-left: 0;
@@ -186,23 +177,26 @@
   @include respond-to(tablet) {
     width: 33.333%;
     padding: 0;
-    height: 232px;
+    min-height: 232px;
 
     &:last-child {
       width: 33.333%;
       padding-left: 36px;
     }
   }
-
 }
 
 .news__title {
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 36px;
-  text-align: left;
-  text-transform: uppercase;
-  margin-bottom: 40px;
+  display: none;
+  @include respond-to(tablet) {
+    display: block;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
 }
 
 .news-text {
@@ -215,6 +209,14 @@
   background-color: #ec9e03;
   position: relative;
   height: 100%;
+  min-height: 166px;
+
+  @include respond-to(medium) {
+    font-size: 28px;
+    line-height: 34px;
+    padding: 22px 34px 20px 26px;
+    min-height: 232px;
+  }
 }
 
 .news__add {
@@ -231,8 +233,17 @@
 
 .news-socials {
   background: #f5c507 no-repeat 50% 50%;
-  min-height: 127px;
+  min-height: 166px;
   height: 100%;
+  position: relative;
+
+  //height: 232px;
+
+  @include respond-to(medium) {
+    min-height: 232px;
+    padding: 45px 50px;
+
+  }
 
   @include respond-to(tablet) {
     background-color: #ec9e03;
@@ -244,12 +255,33 @@
   background-size: 79px 66px;
 }
 
+.news__counter {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  height: 38px;
+  width: 26px;
+
+}
+.counter {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 38px;
+}
+
 .footer {
   background: #4c4c4c;
   padding: 0 6px;
   text-align: center;
   vertical-align: middle;
   box-shadow: 0 0 6px 3px #000;
+
+  @include respond-to(tablet) {
+    padding: 6px;
+    overflow: hidden;
+  }
 }
 
 .tag {
@@ -282,18 +314,23 @@
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .benefits__img {
-  height: 146px;
-  width: 100%;
-  background: url(../img/devices.png) no-repeat 50% 50%;
-  background-size: contain;
   position: relative;
 
+  img {
+    max-width: 100%;
+  }
+
   @include respond-to(medium) {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+  @include respond-to(tablet) {
     padding-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -301,22 +338,28 @@
   position: relative;
   float: left;
   width: 100%;
-
   @include respond-to(medium) {
+    width: 100%;
+  }
+  @include respond-to(tablet) {
     width: 50%;
   }
 }
 
 .benefits__tag {
   position: absolute;
-  bottom: 110px;
-  left: calc(50% - 148px);
+  top: -29px;
+  left: -8px;
   z-index: 2;
+
+  //@include respond-to(medium) {
+  //  bottom: 110px;
+  //  left: calc(50% - 170px);
+  //}
 }
 
 .benefits__list {
   display: none;
-
   @include respond-to(medium) {
     display: block;
   }
@@ -326,10 +369,7 @@
   color: #a9a9a7;
   font-family: 'Open Sans', sans-serif;
   position: relative;
-
-  font-size: 22px;
-  margin-bottom: 26px;
-  padding-left: 50px;
+  padding-left: 33px;
 
   &:before {
     content: '';
@@ -337,9 +377,27 @@
     border-radius: 50%;
     background: #f5c506;
 
-    width:14px;
-    height: 14px;
-    top: 6px;
-    left: 16px;
+    width:12px;
+    height: 12px;
+    top: 3px;
+    left: 0;
+  }
+
+  @include respond-to(medium) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 22px;
+    margin-bottom: 26px;
+    padding-left: 50px;
+
+    &:before {
+      width:14px;
+      height: 14px;
+      top: 6px;
+      left: 16px;
+    }
   }
 }
