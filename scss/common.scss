@@ -157,6 +157,10 @@
 
 .news-list {
   @include clear-fix;
+
+  @include respond-to(tablet) {
+    display: table;
+  }
 }
 
 .news-list__item {
@@ -175,13 +179,19 @@
   }
 
   @include respond-to(tablet) {
+    float: none;
+    display: table-cell;
     width: 33.333%;
     padding: 0;
-    min-height: 232px;
+    height: 232px;
+    vertical-align: top;
 
+    &:nth-child(2) {
+      width: 33.333%;
+      padding-right: 36px;
+    }
     &:last-child {
       width: 33.333%;
-      padding-left: 36px;
     }
   }
 }
@@ -199,7 +209,7 @@
   }
 }
 
-.news-text {
+.news__text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -215,11 +225,15 @@
     font-size: 28px;
     line-height: 34px;
     padding: 22px 34px 20px 26px;
-    min-height: 232px;
+    //min-height: 232px;
+    height: 5em;
+    overflow: hidden;
+    //@include text-overflow();
   }
 }
 
 .news__add {
+  display: none;
   position: absolute;
   width: 10px;
   height: 10px;
@@ -229,6 +243,10 @@
   cursor: pointer;
   background: url(../img/icon-plus.svg) no-repeat 50% 50%;
   background-size: contain;
+  @include respond-to(tablet) {
+    display: block;
+  }
+
 }
 
 .news-socials {
@@ -237,12 +255,9 @@
   height: 100%;
   position: relative;
 
-  //height: 232px;
-
   @include respond-to(medium) {
     min-height: 232px;
     padding: 45px 50px;
-
   }
 
   @include respond-to(tablet) {
@@ -256,12 +271,15 @@
 }
 
 .news__counter {
+  display: none;
   position: absolute;
   top: 18px;
   right: 20px;
   height: 38px;
   width: 26px;
-
+  @include respond-to(tablet) {
+    display: block;
+  }
 }
 .counter {
   color: #fff;
@@ -271,33 +289,6 @@
   line-height: 38px;
 }
 
-.footer {
-  background: #4c4c4c;
-  padding: 0 6px;
-  text-align: center;
-  vertical-align: middle;
-  box-shadow: 0 0 6px 3px #000;
-
-  @include respond-to(tablet) {
-    padding: 6px;
-    overflow: hidden;
-  }
-}
-
-.tag {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background-color: #f5c506;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 9px;
-  line-height: 58px;
-  vertical-align: middle;
-  text-align: center;
-}
 
 .benefits {
   background-color: #474747;
@@ -315,6 +306,14 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 56px;
+
+  @include respond-to(medium) {
+    font-size: 33px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 43px;
+  }
 }
 
 .benefits__img {
@@ -342,7 +341,11 @@
     width: 100%;
   }
   @include respond-to(tablet) {
-    width: 50%;
+    width: 55%;
+
+    &:last-child {
+      width: 45%;
+    }
   }
 }
 
@@ -351,11 +354,14 @@
   top: -29px;
   left: -8px;
   z-index: 2;
+  @include respond-to(medium) {
 
-  //@include respond-to(medium) {
-  //  bottom: 110px;
-  //  left: calc(50% - 170px);
-  //}
+  }
+
+  @include respond-to(tablet) {
+    bottom: -52px;
+    left: -14px;
+  }
 }
 
 .benefits__list {
