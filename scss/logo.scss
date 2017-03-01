@@ -43,14 +43,14 @@
   }
 }
 
-.logo__icon-main,.logo__icon-rotate {
+.logo__icon-main, .logo__icon-rotate {
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .logo__icon-main {
-  fill: #f5c506;
+  fill: $primary-color;
   z-index: 2;
 }
 
@@ -61,9 +61,9 @@
 
 .logo__text {
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  font-family: $logo-font;
   font-size: 10px;
-  color: #fff;
+  color: $contrast-color;
   font-style: italic;
   font-weight: 700;
   text-transform: uppercase;
@@ -90,7 +90,7 @@
   @include respond-to(tablet) {
     color: #fff;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: $logo-font;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 300;

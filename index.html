@@ -61,20 +61,22 @@
         <div class="header__content page">
             <div class="header__media">
                 <div class="video">
-                    <button class="video__play-btn" data-state="play"></button>
-                    <video id="video1">
+                    <button class="video__play-btn" data-state="not-hidden"></button>
+                    <video class="video-tag">
                         <source src="video/rio.mp4" type="video/mp4" >
                         <source src="video/rio.webm" type="video/webm">
                         <p><strong>Note:</strong> Your browser does not support HTML5 video.</p>
                     </video>
-                    <div id="video-controls" class="controls" data-state="hidden">
-                        <button id="playpause" type="button" data-state="play"></button>
-                        <div class="progress">
-                            <progress id="progress" value="0" min="0">
-                                <span id="progress-bar"></span>
+                    <div class="video-controls" data-state="visible">
+                        <button class="video__playpause-btn" type="button" data-state="play"></button>
+                        <div class="video-progress">
+                            <progress class="progress" value="0">
+                                <div class="progress-bar">
+                                    <span></span>
+                                </div>
                             </progress>
                         </div>
-                        <button id="mute" type="button" data-state="mute"></button>
+                        <button class="video__mute-btn" type="button" data-state="mute"></button>
                     </div>
                 </div>
             </div>
@@ -111,19 +113,32 @@
         <div class="news__title page">Lorem ipsum dolor sit amet</div>
         <div class="news-list page">
             <div  class="news-list__item">
-                <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut
+                <div class="news-list__text">
+                    <div class="news__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut
+                    </div>
                     <div class="news__add"></div>
                 </div>
             </div>
             <div  class="news-list__item">
-                <div class="video">
-                    <button class="video__play-btn" data-state="play"></button>
-                    <video id="video2">
+                <div class="video video--small">
+                    <button class="video__play-btn" data-state="not-hidden"></button>
+                    <video class="video-tag">
                         <source src="video/Jorge-el-curioso.mp4" type="video/mp4" >
                         <source src="video/Jorge-el-curioso.webm" type="video/webm">
                         <p><strong>Note:</strong> Your browser does not support HTML5 video.</p>
                     </video>
+                    <div class="video-controls" data-state="hidden">
+                        <button class="video__playpause-btn" type="button" data-state="play"></button>
+                        <div class="video-progress">
+                            <progress class="progress"  value="0">
+                                <div class="progress-bar">
+                                    <span></span>
+                                </div>
+                            </progress>
+                        </div>
+                        <button class="video__mute-btn" type="button" data-state="mute"></button>
+                    </div>
                 </div>
             </div>
             <div  class="news-list__item">
@@ -183,6 +198,6 @@
         </div>
     </footer>
 
-    <script src="js/video-player.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

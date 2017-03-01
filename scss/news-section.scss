@@ -1,0 +1,181 @@
+.news {
+  @include respond-to(tablet) {
+    background-color: #f6cc24;
+    background-image: linear-gradient( 45deg, #f4c506 25%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, #f4c506 75%, #f4c506),
+                      linear-gradient( 45deg, #f4c506 25%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, #f4c506 75%, #f4c506);
+    background-size:  28px 22px;;
+    background-position: 0 0, 14px 12px;
+
+    padding: 40px 0;
+  }
+}
+
+.news-list {
+  @include clear-fix;
+  @include respond-to(tablet) {
+    display: table;
+  }
+}
+
+.news-list__item {
+  float: left;
+  width: 50%;
+  padding: 17px 10px 10px 10px;
+  height: 234px;
+  min-height: 234px;
+
+  &:nth-child(2n) {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    width: 100%;
+    padding: 0;
+  }
+
+  @include respond-to(tablet) {
+    float: none;
+    display: table-cell;
+    width: 33.333%;
+    padding: 0;
+    vertical-align: top;
+
+    &:nth-child(2) {
+      width: 33.333%;
+      padding-right: 36px;
+    }
+    &:last-child {
+      width: 33.333%;
+    }
+  }
+}
+
+.news-list__text {
+  padding: 11px 15px 9px 13px;
+  background-color: $secondary-color;
+  position: relative;
+  height: 100%;
+
+  @include respond-to(medium) {
+    padding: 22px 34px 20px 26px;
+    overflow: hidden;
+  }
+}
+
+.news__title {
+  display: none;
+  @include respond-to(tablet) {
+    display: block;
+    color: $contrast-color;
+    font-family: $main-font;
+    font-size: 36px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+}
+
+.news__text {
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: $contrast-color;
+  overflow: hidden;
+
+  position: relative;
+  height: 100%;
+
+  &:after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+    width: 80%;
+    height: 1.2em;
+    background: linear-gradient(to right, rgba($secondary-color, 0), rgba($secondary-color, 1) 50%);
+  }
+
+  @include respond-to(medium) {
+    font-size: 28px;
+    line-height: 34px;
+    height: 6em;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+    &:after {
+      width: 70%;
+      bottom: 0;
+    }
+  }
+
+  @include respond-to(tablet) {
+    &:after {
+      width: 35%;
+    }
+  }
+}
+
+.news__add {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 12px;
+  right: 10px;
+  z-index: 2;
+  cursor: pointer;
+  background: url(../img/icon-plus.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.news-socials {
+  background: #f5c507 no-repeat 50% 50%;
+  height: 100%;
+  position: relative;
+  .news__add {
+    display: none;
+  }
+
+  @include respond-to(medium) {
+    padding: 45px 50px;
+  }
+
+  @include respond-to(tablet) {
+    background-color: $secondary-color;
+
+    .news__add {
+      display: block;
+    }
+  }
+}
+
+.news-socials--tw {
+  background-image: url(../img/icon-twitter.svg);
+  background-size: 79px 66px;
+
+  @include respond-to(medium) {
+    background-image: url(../img/icon-twitter.svg);
+    background-size: 123px 93px;
+  }
+
+  @include respond-to(tablet) {
+    background-image: url(../img/icon-twitter.svg);
+    background-size: 163px 133px;
+  }
+}
+
+.news__counter {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  height: 38px;
+  width: 26px;
+  @include respond-to(tablet) {
+    display: block;
+  }
+}

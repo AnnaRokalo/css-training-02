@@ -2,11 +2,13 @@
     background: none;
 
     @include respond-to(tablet) {
+        background: #998921;
         background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
-        linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
-        url(../img/header-bg.jpg) no-repeat 0 0;
+                    linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.1) 50%,rgba(0, 0, 0, 0) 52%),
+                    url(../img/header-bg.jpg) no-repeat 0 0;
         background-size: 0.8em 0.8em, 0.8em 0.8em, cover;
     }
+
 }
 
 .header__topbar {
@@ -19,6 +21,7 @@
 }
 
 .header__logo {
+    background-color: #464646;
     background-image: linear-gradient( to top, #464646, #636363);
     display: table-cell;
     vertical-align: middle;
@@ -54,6 +57,7 @@
     @include respond-to(tablet) {
         padding-bottom: 64px;
         display: table;
+        width: 100%;
     }
 }
 
@@ -64,6 +68,9 @@
         display: table-cell;
         vertical-align: middle;
     }
+    @media only screen and (min-width: 940px) {
+        width: 52%;
+    }
 }
 
 .header__text {
@@ -73,6 +80,9 @@
         width: 50%;
         vertical-align: middle;
     }
+    @media only screen and (min-width: 940px) {
+        width: 45%;
+    }
 }
 
 .header__title {
@@ -80,7 +90,7 @@
     font-family: 'Asap', sans-serif;
     font-size: 46px;
     font-weight: 400;
-    color: #f5c506;
+    color: $primary-color;
     text-transform: uppercase;
     vertical-align: middle;
     margin-bottom: 28px;
@@ -92,5 +102,5 @@
 }
 
 .header__title--white {
-    color: #ffffff;
+    color: $contrast-color;
 }

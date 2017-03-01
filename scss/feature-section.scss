@@ -1,0 +1,119 @@
+.features {
+  position: relative;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(#e3e3e3,.3) 48%, rgba(#e3e3e3,.3) 52%, transparent 52%);
+  background-size: 6px 6px;
+
+  padding: 28px 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba($contrast-color,0.3);
+    background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(#e3e3e3,.3) 48%, rgba(#e3e3e3,.3) 52%, transparent 52%);
+    background-size: 6px 6px;
+    z-index: 3;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -9px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba($contrast-color,0.5);
+    background-image: linear-gradient(45deg, transparent,transparent 48%, rgba(#e3e3e3,.3) 48%, rgba(#e3e3e3,.3) 52%, transparent 52%);
+    background-size: 6px 6px;
+    z-index: 2;
+  }
+
+  @include respond-to(tablet) {
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    &:before, &:after {
+      display: none;
+    }
+  }
+}
+
+.feature {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.feature__icon {
+  height: 69px;
+  margin: 0 auto 14px auto;
+
+  @include respond-to(medium) {
+    height: 76px;
+  }
+
+  @include respond-to(tablet) {
+    height: 95px;
+  }
+}
+
+.feature__icon--cloud {
+  background: url(../img/icon-cloud.svg) no-repeat 50% 50%;
+  background-size: 60px 69px;
+
+  @include respond-to(medium) {
+    background-size: 90px 76px;
+  }
+
+  @include respond-to(tablet) {
+    background-size: 109px 95px;
+  }
+}
+
+.feature__icon--leave {
+  background: url(../img/icon-leave.svg) no-repeat 50% 50%;
+  background-size: 44px 69px;
+
+  @include respond-to(medium) {
+    background-size: 64px 76px;
+  }
+
+  @include respond-to(tablet) {
+    background-size: 91px 95px;
+  }
+}
+
+.feature__icon--airplane {
+  background: url(../img/icon-airplane.svg) no-repeat 50% 50%;
+  background-size: 44px 69px;
+
+  @include respond-to(medium) {
+    background-size: 64px 76px;
+  }
+  @include respond-to(tablet) {
+    background-size: 81px 95px;
+  }
+}
+
+.feature__title {
+  color: #000;
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include respond-to(medium) {
+    font-size: 18px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 27px;
+  }
+}
