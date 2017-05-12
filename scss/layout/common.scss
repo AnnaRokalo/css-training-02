@@ -1,0 +1,26 @@
+@import '../helpers/helpers';
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include respond-to(tablet) {
+    padding: 0 10px;
+  }
+}
+
+.items {
+  @include clear-fix;
+}
+
+.item {
+  float: left;
+  width:33.333%;
+  position: relative;
+  z-index: 5;
+}

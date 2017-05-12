@@ -1,0 +1,9 @@
+@import '../base/config';
+
+.counter {
+  color: $contrast-color;
+  font-family: $main-font;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 38px;
+}

@@ -1,3 +1,6 @@
+@import '../helpers/helpers';
+@import '../base/config';
+
 .features {
   position: relative;
   background-color: #f2f2f2;
@@ -64,7 +67,7 @@
 }
 
 .feature__icon--cloud {
-  background: url(../img/icon-cloud.svg) no-repeat 50% 50%;
+  background: url(../../img/icon-cloud.svg) no-repeat 50% 50%;
   background-size: 60px 69px;
 
   @include respond-to(medium) {
@@ -77,7 +80,7 @@
 }
 
 .feature__icon--leave {
-  background: url(../img/icon-leave.svg) no-repeat 50% 50%;
+  background: url(../../img/icon-leave.svg) no-repeat 50% 50%;
   background-size: 44px 69px;
 
   @include respond-to(medium) {
@@ -90,7 +93,7 @@
 }
 
 .feature__icon--airplane {
-  background: url(../img/icon-airplane.svg) no-repeat 50% 50%;
+  background: url(../../img/icon-airplane.svg) no-repeat 50% 50%;
   background-size: 44px 69px;
 
   @include respond-to(medium) {

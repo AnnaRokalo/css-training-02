@@ -1,13 +1,18 @@
-@import "reset";
-@import "helpers";
-@import "config";
-@import "progress-bar";
-@import "common";
-@import "header";
-@import "logo";
-@import "main-nav";
-@import "video";
-@import "news-section";
-@import "benefits-section";
-@import "feature-section";
-@import "footer";
+@import "base/reset";
+@import "base/config";
+
+@import "helpers/helpers";
+
+@import "layout/common";
+@import "layout/header";
+@import "layout/news-section";
+@import "layout/benefits-section";
+@import "layout/feature-section";
+@import "layout/footer";
+
+@import "modules/video";
+@import "modules/main-nav";
+@import "modules/logo";
+@import "modules/progress-bar";
+@import "modules/counter";
+@import "modules/tag";
