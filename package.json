@@ -1,21 +1,17 @@
 {
-  "name": "css02",
+  "name": "test-responsive-design",
   "version": "1.0.0",
-  "description": "Second task for css/html training.",
+  "description": "Test CSS project with responsive design",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnnaRokalo/css-training-02.git"
+    "url": "git+https://github.com/AnnaRokalo/test-responsive-design.git"
   },
   "author": "Anna Rokalo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AnnaRokalo/css-training-02/issues"
-  },
-  "homepage": "https://github.com/AnnaRokalo/css-training-02#readme",
   "devDependencies": {
     "browser-sync": "2.11.0",
     "gulp-autoprefixer": "3.1.0",
